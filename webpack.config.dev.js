@@ -2,8 +2,10 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-	devtool: 'source-map',
+	debug: true,
+	devtool: 'eval',
 	entry: [
+		'webpack-hot-middleware/client',
 		'./src/index.tsx'
 	],
 	output: {
@@ -12,12 +14,7 @@ module.exports = {
 	},
 	plugins: [
 		new webpack.HotModuleReplacementPlugin(),
-		new webpack.NoErrorsPlugin(),
-		new webpack.optimize.UglifyJsPlugin({
-			compressor: {
-				warnings: false
-			}
-		})
+		new webpack.NoErrorsPlugin()
 	],
 	module: {
 		loaders: [{

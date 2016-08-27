@@ -12,7 +12,6 @@ module.exports = {
 	},
 	plugins: [
 		new webpack.HotModuleReplacementPlugin(),
-		new webpack.NoErrorsPlugin(),
 		new webpack.optimize.UglifyJsPlugin({
 			compressor: {
 				warnings: false
@@ -23,11 +22,18 @@ module.exports = {
 		loaders: [{
 			test: /\.tsx?$/,
 			loaders: ['babel', 'ts'],
-			include: path.join(__dirname, 'src')
+			include: path.resolve('./src')
 		}]
 	},
 	resolve: {
 		root: [path.resolve('./src')],
-		extensions: ['', '.jsx', '.js', '.tsx', '.ts']
+		extensions: ['', '.jsx', '.js', '.tsx', '.ts'],
+        alias: {
+            react: path.resolve(__dirname, './node_modules/react')
+        },
+        fallback: path.resolve(__dirname, './node_modules')
+	},
+    resolveLoader: {
+        fallback: path.resolve(__dirname, './node_modules')
 	}
 };

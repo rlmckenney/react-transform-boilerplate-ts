@@ -12,7 +12,7 @@ interface ICounterState {
 export default class Counter extends React.Component<ICounterProps, ICounterState> {
 	private interval: number;
 
-	constructor(props) {
+	constructor(props: ICounterProps) {
 		super(props);
 		this.state = { counter: 0 };
 		this.interval = window.setInterval(() => this.tick(), 1000);

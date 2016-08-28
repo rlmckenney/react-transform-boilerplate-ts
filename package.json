@@ -1,18 +1,20 @@
 {
-  "name": "react-transform-boilerplate-ts",
+  "name": "react-typescript-material-transform-boilerplate",
   "version": "1.0.0",
-  "description": "A new Webpack boilerplate with hot reloading React components written in Typescript",
+  "description": "A Webpack Typescript boilerplate with hot reloading for React with Material-UI components.",
   "scripts": {
     "clean": "rimraf dist",
     "start": "node devServer.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wmaurer/react-transform-boilerplate-ts.git"
+    "url": "https://github.com/rlmckenney/react-typescript-material-transform-boilerplate.git"
   },
   "keywords": [
     "react",
     "reactjs",
+    "material",
+    "material-ui",
     "boilerplate",
     "hot",
     "reload",
@@ -24,12 +26,12 @@
     "typescript",
     "react-transform"
   ],
-  "author": "Wayne Maurer (http://github.com/wmaurer)",
-  "license": "CC0-1.0",
+  "author": "Robert McKenney (http://github.com/rlmckenney)",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wmaurer/react-transform-boilerplate-ts/issues"
+    "url": "https://github.com/rlmckenney/react-typescript-material-transform-boilerplate/issues"
   },
-  "homepage": "https://github.com/wmaurer/react-transform-boilerplate-ts",
+  "homepage": "https://github.com/rlmckenney/react-typescript-material-transform-boilerplate",
   "devDependencies": {
     "babel-core": "^6.14.0",
     "babel-loader": "^6.2.5",

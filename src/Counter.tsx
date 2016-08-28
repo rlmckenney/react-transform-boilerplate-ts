@@ -12,8 +12,7 @@ interface ICounterState {
 }
 
 export default class Counter extends React.Component<ICounterProps, ICounterState> {
-	private interval: number;
-	private subtitle: string; 
+	private interval: number; 
 
 	constructor(props: ICounterProps) {
 		super(props);
@@ -37,7 +36,7 @@ export default class Counter extends React.Component<ICounterProps, ICounterStat
 			<Card style={{width: '300px', marginLeft: '30px'}}>
 				<CardHeader
 					title = 'Counter'
-					subtitle = {this.subtitle}
+					subtitle = {"Increment by " + this.props.increment}
 					avatar = {<FontIcon className="material-icons">schedule</FontIcon>} />
 				<CardText>
 					<h1 style={{ color: this.props.color, textAlign: 'end' }}>

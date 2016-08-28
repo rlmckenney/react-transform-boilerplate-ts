@@ -1,5 +1,5 @@
 {
-  "name": "react-typescript-material-transform-boilerplate",
+  "name": "ts-react-material-transform-boilerplate",
   "version": "1.0.0",
   "description": "A Webpack Typescript boilerplate with hot reloading for React with Material-UI components.",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rlmckenney/react-typescript-material-transform-boilerplate.git"
+    "url": "https://github.com/rlmckenney/ts-react-material-transform-boilerplate.git"
   },
   "keywords": [
     "react",
@@ -29,9 +29,9 @@
   "author": "Robert McKenney (http://github.com/rlmckenney)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rlmckenney/react-typescript-material-transform-boilerplate/issues"
+    "url": "https://github.com/rlmckenney/ts-react-material-transform-boilerplate/issues"
   },
-  "homepage": "https://github.com/rlmckenney/react-typescript-material-transform-boilerplate",
+  "homepage": "https://github.com/rlmckenney/ts-react-material-transform-boilerplate",
   "devDependencies": {
     "babel-core": "^6.14.0",
     "babel-loader": "^6.2.5",
@@ -41,6 +41,7 @@
     "babel-preset-stage-0": "^6.5.0",
     "express": "^4.14.0",
     "material-ui": "^0.15.4",
+    "react-tap-event-plugin": "^1.0.0",
     "react-transform-catch-errors": "^1.0.2",
     "react-transform-hmr": "^1.0.4",
     "redbox-react": "^1.3",

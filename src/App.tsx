@@ -16,6 +16,8 @@ export default class App extends React.Component<{}, IAppState> {
 		this.setState({ navDrawerOpen: false });
 	}
 
+	// a property that holds a function that has "this" auto-bound to this component so that we
+	// can pass it as a prop to other components down the component tree
 	toggleNavDrawer = () => {
 		this.setState({ navDrawerOpen: !this.state.navDrawerOpen });
 	}

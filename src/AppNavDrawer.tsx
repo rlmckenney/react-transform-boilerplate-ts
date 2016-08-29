@@ -3,13 +3,13 @@ import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 import {NavDrawerHeader} from './AppNavDrawerHeader';
 
-interface DrawerProps {
+interface IDrawerProps {
     open: boolean;
     docked: boolean;
     handleToggleRequest: () => void;
 }
 
-export class AppNavDrawer extends React.Component<DrawerProps, {}> {
+export class AppNavDrawer extends React.Component<IDrawerProps, {}> {
 
     render() {
        

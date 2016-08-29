@@ -4,13 +4,35 @@ import { muiTheme } from "./MyMuiTheme";
 import { lightBlue300, teal300 } from 'material-ui/styles/colors';
 import AppBar from "material-ui/AppBar";
 import Counter from './Counter';
+import { AppNavDrawer } from './AppNavDrawer';
 
-export default class App extends React.Component<{}, {}> {
+interface IAppState {
+	navDrawerOpen: boolean;
+}
+
+export default class App extends React.Component<{}, IAppState> {
+	
+	componentWillMount() {
+		this.setState({ navDrawerOpen: false });
+	}
+
+	toggleNavDrawer = () => {
+		this.setState({ navDrawerOpen: !this.state.navDrawerOpen });
+	}
+
 	render() {
 		return (
 			<MuiThemeProvider muiTheme={muiTheme}>
 				<div id="mui-theme-wrapper">
-					<AppBar title="TS React Material-UI Boilerplate" />
+					<AppBar 
+						title="TS React Material-UI Boilerplate" 
+						onLeftIconButtonTouchTap={this.toggleNavDrawer}
+						/>
+					<AppNavDrawer 
+						open={this.state.navDrawerOpen} 
+						docked={false} 
+						handleToggleRequest={this.toggleNavDrawer}
+						/>
 					<div style={{margin: '40px 35px', display: 'flex', justifyContent: 'flex-start'}}>
 						<Counter increment={1} color={lightBlue300} />
 						<Counter increment={5} color={teal300} />

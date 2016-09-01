@@ -16,18 +16,19 @@ interface ICounterState {
 export default class Counter extends React.Component<ICounterProps, ICounterState> {
 	private interval: number; 
 
-	constructor(props: ICounterProps) {
-		super(props);
-		this.interval = window.setInterval(() => this.tick(), 1000);
-		this.handleRaiseIncrement = this.handleRaiseIncrement.bind(this);
-		this.handleLowerIncrement = this.handleLowerIncrement.bind(this);
-	}
-
 	componentWillMount() {
 		this.setState({
 			counter: 0,
 			increment: this.props.increment
 		}) 
+	}
+
+	componentDidMount() {
+		this.interval = setInterval(() => this.tick(), 1000);
+	}
+
+	componentWillUnmount() {
+		window.clearInterval(this.interval);
 	}
 
 	tick() {
@@ -37,18 +38,14 @@ export default class Counter extends React.Component<ICounterProps, ICounterStat
 		});
 	}
 
-	componentWillUnmount() {
-		window.clearInterval(this.interval);
-	}
-
-	handleRaiseIncrement() {
+	handleRaiseIncrement = () => {
 		this.setState({
 			counter: this.state.counter,
 			increment: this.state.increment + 1
 		});
 	}
 
-	handleLowerIncrement() {
+	handleLowerIncrement = () => {
 		this.setState({
 			counter: this.state.counter,
 			increment: this.state.increment - 1
@@ -74,7 +71,7 @@ export default class Counter extends React.Component<ICounterProps, ICounterStat
 					avatar = {<FontIcon className="material-icons">schedule</FontIcon>} />
 				<CardText>
 					<h1 style={{ color: this.props.color, textAlign: 'center' }}>
-						{this.state.counter}
+						{this.state.counter.toLocaleString()}
 					</h1>
 				</CardText>
 				<CardActions style={counterStyles.cardActions}>

@@ -8,51 +8,52 @@ interface ICounterProps {
 	color: string;
 }
 
+/**
+ * The state interface properties are typed here as optional.  THIS IS A HACK to allow us to update 
+ * single values in setState(), because TypeScript does not yet support partial interface objects.
+ * We manually ensure that all truly required properties are initialized in componentWillMount().
+ */  
 interface ICounterState {
-	counter: number;
-	increment: number;
+	counter?: number;
+	increment?: number;
 }
 
 export default class Counter extends React.Component<ICounterProps, ICounterState> {
+	
 	private interval: number; 
 
-	componentWillMount() {
+	private componentWillMount() {
 		this.setState({
 			counter: 0,
 			increment: this.props.increment
 		}) 
 	}
 
-	componentDidMount() {
+	private componentDidMount() {
 		this.interval = setInterval(() => this.tick(), 1000);
 	}
 
-	componentWillUnmount() {
+	private componentWillUnmount() {
 		window.clearInterval(this.interval);
 	}
 
-	tick() {
-		this.setState({
-			counter: this.state.counter + this.state.increment,
-			increment: this.state.increment
-		});
+	private tick() {
+		this.setState({ counter: this.state.counter + this.state.increment });
 	}
 
-	handleRaiseIncrement = () => {
-		this.setState({
-			counter: this.state.counter,
-			increment: this.state.increment + 1
-		});
+	public handleRaiseIncrement = () => {
+		this.setState({ increment: this.state.increment + 1 });
 	}
 
-	handleLowerIncrement = () => {
-		this.setState({
-			counter: this.state.counter,
-			increment: this.state.increment - 1
-		});
+	public handleLowerIncrement = () => {
+		this.setState({ increment: this.state.increment - 1 });
 	}
 
-	render() {
+	public reset = () => { 
+		this.setState({ counter: 0 }); 
+	}
+
+	public render() {
 		const counterStyles = {
 			card: {
 				width: '350px',

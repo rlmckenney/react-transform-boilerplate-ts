@@ -14,6 +14,11 @@ products. Is copied from Dan Abramov's [react-transform-boilerplate](https://git
 converted to Typescript, uses an additional loader [ts-loader](https://github.com/TypeStrong/ts-loader)
 and has had all dependancies updated to current versions (including React 15.3 and Babel 6.14).
 
+## Known issue
+The [react-tap-event-plugin](https://github.com/zilverline/react-tap-event-plugin) required to support the onTouchTap events
+in the Material-UI components causes a type error. It is none the less loaded and functions correctly with Babel. However, 
+this does necessitate manual reloading in some cases. Suggestions on how to fix this would be most welcome!
+
 ## How does Typescript help when writing a React Application?
 
 Typesript is about type safety, and by using the [typings for react on DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/react),

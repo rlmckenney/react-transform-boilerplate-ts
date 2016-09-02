@@ -1,7 +1,7 @@
 {
   "name": "ts-react-material-transform-boilerplate",
   "version": "1.0.0",
-  "description": "A Webpack Typescript boilerplate with hot reloading for React with Material-UI components.",
+  "description": "A React boilerplate using Typescript and Material-UI components with Transform hot-reloading.",
   "scripts": {
     "clean": "rimraf dist",
     "start": "node devServer.js"

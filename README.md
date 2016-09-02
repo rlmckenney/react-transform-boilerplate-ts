@@ -1,13 +1,18 @@
-React Transform Boilerplate, using Typescript
-=============================================
+React Material-UI Boilerplate, using Typescript with Transform for Hot Reloading
+================================================================================
 
-This is a new boilerplate for live editing ReactJS components written in Typescript.
-It replaces a previous boilerplate [react-hot-boilerplate-ts](https://github.com/wmaurer/react-hot-boilerplate-ts),
-as that uses the now deprecated [react-hot-loader](https://github.com/gaearon/react-hot-loader).
-This boilerplate uses the new [React Transform](https://github.com/gaearon/react-transform-boilerplate) family of products.
+This is a new boilerplate / starter kit for live editing ReactJS components written in Typescript. The expample App 
+shows some simple examples of how to incorporate the great [Material-UI React componentent library](https://github.com/callemall/material-ui) 
+that implements Google's Material Design.
 
-It is directly copied from Dan Abramov's [react-transform-boilerplate](https://github.com/gaearon/react-transform-boilerplate),
-converted to Typescript, and uses an additional loader [ts-loader](https://github.com/TypeStrong/ts-loader)
+This project builds on the [react-transform-boilerplate-ts](https://github.com/danzel/react-transform-boilerplate-ts) 
+from Dave Leaver, which in turn builds on the previous [react-hot-boilerplate-ts](https://github.com/wmaurer/react-hot-boilerplate-ts),
+from Wayne Maurer that uses the now deprecated [react-hot-loader](https://github.com/gaearon/react-hot-loader).
+
+This boilerplate uses the new [React Transform](https://github.com/gaearon/react-transform-boilerplate) family of 
+products. Is copied from Dan Abramov's [react-transform-boilerplate](https://github.com/gaearon/react-transform-boilerplate),
+converted to Typescript, uses an additional loader [ts-loader](https://github.com/TypeStrong/ts-loader)
+and has had all dependancies updated to current versions (including React 15.3 and Babel 6.14).
 
 ## How does Typescript help when writing a React Application?
 
@@ -47,8 +52,8 @@ insignificant compared to the rather slow ts-loader. There is currently an issue
 
 ## Questions?
 
-Raise an issue or ping [@waynemaurer](https://twitter.com/waynemaurer) on Twitter.
+Raise an issue or ping [@RLMcKenney](https://twitter.com/rlmckenney) on Twitter.
 
 ## License
 
-CC0 (public domain)
+MIT (public domain)

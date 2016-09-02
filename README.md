@@ -19,6 +19,16 @@ The [react-tap-event-plugin](https://github.com/zilverline/react-tap-event-plugi
 in the Material-UI components causes a type error. It is none the less loaded and functions correctly with Babel. However, 
 this does necessitate manual reloading in some cases. Suggestions on how to fix this would be most welcome!
 
+## Get Started
+```
+git clone https://github.com/rlmckenney/ts-react-material-transform-boilerplate.git my-project
+npm install
+typings install
+npm start
+```
+View the sample App in your browser http://localhost:3000/
+
+
 ## How does Typescript help when writing a React Application?
 
 Typesript is about type safety, and by using the [typings for react on DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/react),

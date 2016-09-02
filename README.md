@@ -20,13 +20,14 @@ in the Material-UI components causes a type error. It is none the less loaded an
 this does necessitate manual reloading in some cases. Suggestions on how to fix this would be most welcome!
 
 ## Get Started
+Download and intitialize the project.
 ```
 git clone https://github.com/rlmckenney/ts-react-material-transform-boilerplate.git my-project
 npm install
 typings install
 npm start
 ```
-View the sample App in your browser http://localhost:3000/
+View the sample App in your browser `http://localhost:3000/`
 
 
 ## How does Typescript help when writing a React Application?

@@ -5,6 +5,8 @@ import { lightBlue300, teal300 } from 'material-ui/styles/colors';
 import AppBar from "material-ui/AppBar";
 import Counter from './Counter';
 import { AppNavDrawer } from './AppNavDrawer';
+import FloatingActionButton from 'material-ui/FloatingActionButton';
+import FontIcon from 'material-ui/FontIcon';
 
 interface IAppState {
 	navDrawerOpen: boolean;
@@ -22,6 +24,10 @@ export default class App extends React.Component<{}, IAppState> {
 		this.setState({ navDrawerOpen: !this.state.navDrawerOpen });
 	}
 
+	resetCounters = () => {
+		window.location.reload();
+	}
+
 	render() {
 		return (
 			<MuiThemeProvider muiTheme={muiTheme}>
@@ -30,6 +36,13 @@ export default class App extends React.Component<{}, IAppState> {
 						title="TS React Material-UI Boilerplate" 
 						onLeftIconButtonTouchTap={this.toggleNavDrawer}
 						/>
+					<FloatingActionButton 
+						secondary={true} 
+						style={{position: 'absolute', top: '44px', right: '150px', zIndex: 1200}}
+						onTouchTap={this.resetCounters}
+						>
+						<FontIcon className="material-icons">history</FontIcon>
+					</FloatingActionButton>
 					<AppNavDrawer 
 						open={this.state.navDrawerOpen} 
 						docked={false} 
